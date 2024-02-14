@@ -6,6 +6,8 @@ hooks:
     - exec: './flow flow:cache:flush'
     - exec: './flow flow:package:rescan'
     - exec: './flow doctrine:migrate'
+    - exec: './flow eventstore:setupall'
+    - exec: './flow setup:run'
     - exec: './flow resource:publish'
     - exec: 'yarn install'
     - exec: 'yarn build'
