@@ -1,0 +1,11 @@
+webimage_extra_packages: [gifsicle, libjpeg-progs, optipng]
+hooks:
+  post-start:
+    - exec: 'npm i -g svgo'
+  post-composer:
+    - exec: './flow flow:cache:flush'
+    - exec: './flow flow:package:rescan'
+    - exec: './flow doctrine:migrate'
+    - exec: './flow resource:publish'
+    - exec: 'yarn install'
+    - exec: 'yarn build'

@@ -1,0 +1,5 @@
+name: ddev-flow
+
+project_files:
+  - commands/web/flow
+  - config.flow.yaml
